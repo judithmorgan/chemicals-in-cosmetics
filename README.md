@@ -3,8 +3,8 @@
 ![chemicals in cosmetics image](../assets/chemicalsincosmetics.png)
 
 # Table of Contents 
-- [Task] (#task)
-- [Tools] (#tools)
+- [Task] (# task)
+- [Tools] (# tools)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Question and Solution](#question-and-solution)
 
