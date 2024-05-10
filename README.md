@@ -4,6 +4,7 @@
 
 # Table of Contents 
 - [Task] (#task)
+- [Tools] (#tools)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Question and Solution](#question-and-solution)
 
@@ -12,5 +13,6 @@ Please note that the database used for this case study can be found on [Data.gov
 If you have any questions, reach out to me on [LinkedIn](https://www.linkedin.com/in/judithpmorgan/).
 
 ## Task
+## Tools
 ## Entity Relationship Diagram
 ## Question and Solution
