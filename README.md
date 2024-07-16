@@ -17,6 +17,8 @@ This project explores harmful ingredients found in cosmetic products using a dat
 
 The primary purpose of the CSCP is to collect information on hazardous and potentially hazardous ingredients in cosmetic products sold in California and to make this information available to the public.
 
+My goal is to identify any insights found from the data that might be helpful to a makeup user who wants to be more proactive about using products with cleaner ingredients and to support companies with that goal.
+
 
 ## Process
 
@@ -25,20 +27,48 @@ Kicking off the analysis, I downloaded the relevant dataset from Data.Gov. After
 ## Entity Relationship Diagram
 ## Question and Solution
 
-The analysis includes the following:
+The analysis includes the following analysis:
 
 1) Count of each chemical in the dataset
+   
+````sql
+````sql
+SELECT chemicalname, COUNT(*) AS chemicalcount
+FROM chemical
+GROUP BY chemicalname
+ORDER BY count (*) DESC 
+```` 
 
 2) Number of hazardous chemicals used by each company
 
+````sql
+SELECT companyname, COUNT(DISTINCT chemicalname) AS chemicalcount
+FROM chemical
+JOIN company
+ON chemical.id = company.id
+GROUP BY companyname
+ORDER BY chemicalcount DESC
+```` 
+
 3) Chemicals by category
+
+````sql
+SELECT subcategory AS productcategory, COUNT(*) AS chemicalcount
+FROM product
+GROUP BY subcategory
+ORDER BY count (*) DESC
+```` 
 
 4) Number of chemicals removed by company
 
-5) Number of times each chemical was removed
+````sql
+SELECT companyname, COUNT(chemicaldateremoved) AS countofchemicalsremoved
+FROM chemical
+JOIN company
+ON chemical.id = company.id
+WHERE chemicaldateremoved IS NOT NULL
+GROUP BY companyname
+ORDER BY countofchemicalsremoved DESC 
+```` 
 
-6) Products discontinued and/or chemicals removed by year
 
-7) Number of times a chemical was removed
-
-8) Chemical by product or company
