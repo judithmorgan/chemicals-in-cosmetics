@@ -27,7 +27,9 @@ Kicking off the analysis, I downloaded the relevant dataset from Data.Gov. After
 ## Entity Relationship Diagram
 ## Question and Solution
 
-The analysis includes the following analysis:
+Database was imported into PostgreSQL and the following SQL queries were executed to answer each relevant question.
+
+The analysis includes the following questions:
 
 1) Count of each chemical in the dataset
    
