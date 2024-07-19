@@ -31,7 +31,7 @@ Database was imported into PostgreSQL and the following SQL queries were execute
 
 The analysis includes the following questions:
 
-1) Count of each chemical in the dataset
+1) How many times did each unique chemical appear in the dataset?
    
 ````sql
 SELECT chemicalname, COUNT(*) AS chemicalcount
@@ -40,7 +40,7 @@ GROUP BY chemicalname
 ORDER BY count (*) DESC 
 ````
 
-2) Count of titanium dioxide in makeup subcategories
+2) In which makeup subcategory is titanium dioxide found most frequently?
    
 ````sql
 SELECT subcategory, chemicalname, COUNT(*) AS count
@@ -53,7 +53,7 @@ ORDER BY count DESC
 ```` 
 
 
-3) Number of hazardous chemicals used by each company
+3) How many potentially hazardous/hazardous chemicals were used by each company in the dateset?
 
 ````sql
 SELECT companyname, COUNT(DISTINCT chemicalname) AS chemicalcount
@@ -65,7 +65,7 @@ ORDER BY chemicalcount DESC
 ````
 
 
-4) Product Count By Company 
+4) How many products did each company have in the dataset? 
 
 ````sql
 SELECT companyname , COUNT(productname) as product 
@@ -77,9 +77,7 @@ ORDER BY product desc
 ````
 
 
-
-
-5) Chemicals by category
+5) Which chemical category has the highest amount of hazadous chemicals found?
 
 ````sql
 SELECT subcategory AS productcategory, COUNT(*) AS chemicalcount
