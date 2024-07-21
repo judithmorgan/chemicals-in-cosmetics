@@ -86,7 +86,7 @@ GROUP BY subcategory
 ORDER BY count (*) DESC
 ```` 
 
-6) Number of chemicals removed by company
+6) Which company took the most effort to remove hazardous/potentially hazardous chemicals in their products? 
 
 ````sql
 SELECT companyname, COUNT(chemicaldateremoved) AS countofchemicalsremoved
@@ -98,7 +98,7 @@ GROUP BY companyname
 ORDER BY countofchemicalsremoved DESC 
 ````
 
-7) Number of Products Discontinued/Chemicals Removed By Year
+7) Which year saw the most number of products discontinued and/or chemicals removed by all companies in the dataset?
    
 ````sql
 SELECT chemicalname, discontinueddate, chemicaldateremoved 
@@ -107,7 +107,7 @@ WHERE chemicaldateremoved IS NOT NULL
 OR discontinueddate IS NOT NULL
 ````
 
-8) Number of Times a Chemical Was Removed
+8) Which chemical was removed the most in the dataset?
    
 ````sql
 SELECT chemicalname, COUNT(chemicaldateremoved) AS countofchemicalsremoved
@@ -119,7 +119,7 @@ GROUP BY chemicalname
 ORDER BY countofchemicalsremoved DESC
 ````
 
-9) Chemical By Product and Company
+9) List out all chemicals by product and company.
    
 ````sql
 SELECT chemicalname, COUNT(chemicaldateremoved) AS countofchemicalsremoved
