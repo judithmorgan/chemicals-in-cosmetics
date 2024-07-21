@@ -24,7 +24,12 @@ My goal is to identify any insights found from the data that might be helpful to
 
 Kicking off the analysis, I downloaded the relevant dataset from Data.Gov. After the download, I cleaned and organized the data using SQL. To isolate specific patterns and trends, I created separate sheets, meticulously breaking down the information. Finally, each prepared sheet was loaded into Tableau for visualization.
 
-## Entity Relationship Diagram
+## Table Diagram
+As the dataset was large and filled with many columns. I divided up the dataset into three tables: product, company, and chemical. I added a unique numerical number for every row in the dataset, known as id. This was used as the primary key.
+
+![chemicals in cosmetics image](../assets/tablediagram.png)
+
+
 ## Question and Solution
 
 Database was imported into PostgreSQL and the following SQL queries were executed to answer each relevant question.
